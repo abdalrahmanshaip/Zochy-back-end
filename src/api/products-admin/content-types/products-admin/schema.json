@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products_admins",
+  "info": {
+    "singularName": "products-admin",
+    "pluralName": "products-admins",
+    "displayName": "products",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "category": {
+      "type": "string"
+    },
+    "size": {
+      "type": "json",
+      "required": true
+    },
+    "soldOut": {
+      "type": "boolean",
+      "default": false
+    },
+    "oldPrice": {
+      "type": "decimal"
+    },
+    "maximumQuantity": {
+      "type": "biginteger"
+    }
+  }
+}
