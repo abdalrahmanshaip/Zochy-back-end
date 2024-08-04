@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "strapi build",
-    "deploy": "npm install --omit=dev && strapi deploy",
+    "deploy": "strapi deploy",
     "develop": "strapi develop",
     "start": "strapi start",
     "strapi": "strapi"
