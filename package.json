@@ -11,6 +11,7 @@
     "build": "strapi build",
     "deploy": "strapi deploy",
     "develop": "strapi develop",
+    "prestart": "mkdir -p public/uploads",
     "start": "strapi start",
     "strapi": "strapi"
   },
