@@ -396,41 +396,6 @@ export interface ApiCartItemCartItem extends Schema.CollectionType {
   };
 }
 
-export interface ApiProductUserProductUser extends Schema.CollectionType {
-  collectionName: 'product_users';
-  info: {
-    singularName: 'product-user';
-    pluralName: 'product-users';
-    displayName: 'Product-User';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-    price: Attribute.Decimal;
-    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    size: Attribute.Blocks;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::product-user.product-user',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::product-user.product-user',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiProductsAdminProductsAdmin extends Schema.CollectionType {
   collectionName: 'products_admins';
   info: {
@@ -905,7 +870,6 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'api::cart-item.cart-item': ApiCartItemCartItem;
-      'api::product-user.product-user': ApiProductUserProductUser;
       'api::products-admin.products-admin': ApiProductsAdminProductsAdmin;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
