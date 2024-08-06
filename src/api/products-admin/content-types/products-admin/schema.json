@@ -40,11 +40,11 @@
       "type": "boolean",
       "default": false
     },
-    "oldPrice": {
-      "type": "decimal"
-    },
     "maximumQuantity": {
       "type": "biginteger"
+    },
+    "oldPrice": {
+      "type": "string"
     }
   }
 }

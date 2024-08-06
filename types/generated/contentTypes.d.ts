@@ -449,8 +449,8 @@ export interface ApiProductsAdminProductsAdmin extends Schema.CollectionType {
     category: Attribute.String;
     size: Attribute.JSON & Attribute.Required;
     soldOut: Attribute.Boolean & Attribute.DefaultTo<false>;
-    oldPrice: Attribute.Decimal;
     maximumQuantity: Attribute.BigInteger;
+    oldPrice: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
